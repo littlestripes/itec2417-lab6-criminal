@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         // check if the fragment has been initialized already
         if (currentFragment == null) {
-            val fragment = CrimeFragment()
+            val fragment = CrimeListFragment.newInstance()
             supportFragmentManager
                 .beginTransaction()
                 .add(R.id.fragment_container, fragment)
