@@ -1,7 +1,7 @@
 package com.example.criminalintent
 
 import android.os.Bundle
-import android.util.Log
+import androidx.appcompat.widget.Toolbar
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -20,6 +20,10 @@ class MainActivity : AppCompatActivity(), CrimeListFragment.Callbacks {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        // added for compatibility since the book is outdated
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
 
         val currentFragment = supportFragmentManager.findFragmentById(R.id.fragment_container)
 
